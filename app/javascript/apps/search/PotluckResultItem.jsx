@@ -35,11 +35,11 @@ class PotluckResultItem extends Component {
     })
     .then ((res) => {
       console.log('res: ', res)
-      // var potluck_id = this.props.potluck_id
+      var recipe_id = res.data.result.id
       axios.post('/api/potluck_recipes', {
         potluck_recipe: {
           potluck_id: 1,
-          recipe_id: res.data.result.id,
+          recipe_id: recipe_id
         }
       })
     })
@@ -53,7 +53,7 @@ class PotluckResultItem extends Component {
         <li className="recipe-search-item">
         <img className="search-item-image" src={this.props.img}></img>
         {this.props.name}, {this.props.rating} / 5
-        <button className= "btn btn-sm searchresult-button" type="submit"  onClick={null}>Add to Potluck</button>
+        <button className= "btn btn-sm searchresult-button" type="submit"  onClick={this.addToPotluck}>Add to Potluck</button>
         <button className= "btn btn-sm searchresult-button" type="submit"  onClick={this.recipeSearch}>Show Recipe</button>
         </li>
       );

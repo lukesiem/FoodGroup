@@ -48,6 +48,7 @@ class Search extends Component {
         })
       }))
       .then( (res) => {
+        console.log('guestData:', guestData)
         res.forEach((res) => {
           var id = res.data.user.id
           guestData[id].name = res.data.user.firstname

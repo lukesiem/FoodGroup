@@ -7,14 +7,14 @@ class  PotluckCreated extends Component {
 
 	constructor (props) {
 	    super(props)
-	    
+
 	    this.state = {
 	    	name: '',
         description: '',
         img: '',
         comment: ''
 	    };
-	   
+
 	}
 
 	componentDidMount() {
@@ -34,14 +34,14 @@ class  PotluckCreated extends Component {
       console.log(error)
     })
   }
-            
+
 
 		render() {
 		  return (
 			  <div className="potluckcreatedBG">
 		      <Navbar />
 		       <h3 className="potluckname"> {this.state.name}</h3>
-		       
+
 		        <div className="container">
 		        <div className="row">
 
@@ -52,39 +52,39 @@ class  PotluckCreated extends Component {
 		             <div className="jumbotron listed4">
 		             <p>{this.state.description}</p>
 		             </div>
-		             
+
                   <div className="input-group invite ">
                    <span className="input-group-btn">
-                    <button class="btn btn-secondary" type="button">Invite</button>
+                    <button className="btn btn-secondary" type="button">Invite</button>
                    </span>
-                   <input type="text" class="form-control" placeholder="users" aria-label="Users" />
-                  </div>    
+                   <input type="text" className="form-control" placeholder="users" aria-label="Users" />
+                  </div>
 
-                
-             
+
+
 		          </div>
 		         <div className="col-sm">
 		         <div className="jumbotron listed5">
 		         <p className="rectext">recipe</p>
 		         </div>
-		        
+
 		          <div className="jumbotron listed6">
 		         <p className="rectext">comments</p>
 		         </div>
-		           
+
 
 		         <form className="commentform">
 				  <textarea className="potluckcomment" placeholder="Comment" />
 				  <button type="submit" className="btn btcomment"> Submit</button>
 				</form>
-		         
+
 		        </div>
 		       </div>
 		      </div>
 		    </div>
-		    
+
 		)
-	} 
+	}
 }
 
 
